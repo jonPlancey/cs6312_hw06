@@ -9,4 +9,8 @@ package edu.westga.cs6312.interfaces.model;
  */
 public interface Formatter {
 
+	
+	public String format();
+	
+	
 }
