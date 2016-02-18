@@ -82,6 +82,15 @@ public class Time {
 		this.hour = 0;
 		this.minute = 0;
 	}
+	
+	/** 
+	 * 0 parameter constructor that 
+	 * initializes the object to midnight
+	 */ 	
+	private int incrementHour() {
+		int incrementHour = 1;
+		return this.hour += incrementHour % 24;
+	}	
 			
 	
 	
