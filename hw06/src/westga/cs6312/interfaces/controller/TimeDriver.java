@@ -14,7 +14,8 @@ public class TimeDriver {
 	 * @param args Command line arguments, not used
 	 */ 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		TimeUI gui = new TimeTUI();
+		gui.run();		
 
 	}
 
