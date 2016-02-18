@@ -25,7 +25,7 @@ public class Time {
 	 * Postcondition: 	hour > -1 && hour < 25, minute > -1 && minute < 61, second > -1 && second < 61
 	 * 			 		set minute, hour and second variables
 	 */ 	
-	private Time (int hour, int minute, int second) {
+	public Time (int hour, int minute, int second) {
 		if (hour < 0 || hour > 24) {
 			throw new IllegalArgumentException("Invalid number, hour must no be less than 0");
 		}
@@ -57,7 +57,7 @@ public class Time {
 	 * Precondition: 	hour < 0 || hour > 24, minute < 0 || minute > 60, second < 0 || second > 60
 	 * Postcondition: 	hour > -1 && hour < 25, minute > -1 && minute < 61, set minute, hour variables
 	 */ 	
-	private Time (int hour, int minute) {
+	public Time (int hour, int minute) {
 		if (hour < 0 || hour > 24) {
 			throw new IllegalArgumentException("Invalid number, hour must no be less than 0");
 		}
@@ -77,7 +77,7 @@ public class Time {
 	 * 0 parameter constructor that 
 	 * initializes the object to midnight
 	 */ 	
-	private Time () {
+	public Time () {
 		this.hour = 0;		
 		this.minute = 0;
 		this.second = 0;
@@ -116,7 +116,7 @@ public class Time {
 	 */ 	
 	public void tick() {
 		int incrementSecond = 1;
-		return this.hour += incrementSecond % 59;
+		this.hour += incrementSecond % 59;
 	}	
 
 	

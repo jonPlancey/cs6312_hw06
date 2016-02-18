@@ -29,7 +29,11 @@ public class TimeTUI {
 	 * controls program flow 
 	 **/
 	public void run() {
-		//int userchoice = 0;		
+		//int userchoice = 0;
+		
+		Time model = new Time();
+		time.tick();
+		
 	}
 	
 }
