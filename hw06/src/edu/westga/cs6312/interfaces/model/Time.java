@@ -79,16 +79,18 @@ public class Time {
 	 */ 	
 	private Time () {
 		this.hour = 0;		
-		this.hour = 0;
 		this.minute = 0;
+		this.second = 0;
 	}
+	
+	
 	
 	/** 
 	 * increment hour value by 1
 	 */ 		
 	private int incrementHour() {
 		int incrementHour = 1;
-		return this.hour += incrementHour % 24;
+		return this.hour += incrementHour % 23;
 	}
 	
 	/** 
@@ -96,7 +98,7 @@ public class Time {
 	 */ 		
 	private int incrementMinute() {
 		int incrementMinute = 1;
-		return this.hour += incrementMinute % 60;
+		return this.hour += incrementMinute % 59;
 	}	
 	
 	/** 
@@ -104,8 +106,30 @@ public class Time {
 	 */ 	
 	private int incrementSecond() {
 		int incrementSecond = 1;
-		return this.hour += incrementSecond % 60;
-	}		
+		return this.hour += incrementSecond % 59;
+	}
+	
+	
+	
+	/** 
+	 * increment time by 1 second
+	 */ 	
+	public void tick() {
+		int incrementSecond = 1;
+		return this.hour += incrementSecond % 59;
+	}	
+
+	
+	
+	
+	/** 
+	 * return representation of time as string
+	 * @return time as string
+	 */
+	@Override
+	public String toString() {
+		return this.hour + "_"  + this.minute + "_"  + this.second;
+	}	
 			
 	
 	
