@@ -29,8 +29,8 @@ public class TimeWhenCreateTime {
 	 */	
 	@Test
 	public void testTimeWhenCreateTimeNew246060() {	
-		Time time = new Time(24, 60, 60);
-		String expect = "24:60:60"; 
+		Time time = new Time(24, 60);
+		String expect = "24:60:0"; 
 		String results = time.toString();
 		assertEquals(expect, results);
 	}
