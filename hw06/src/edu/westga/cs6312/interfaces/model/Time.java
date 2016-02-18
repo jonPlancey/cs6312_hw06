@@ -7,7 +7,7 @@ package edu.westga.cs6312.interfaces.model;
  * @author 	jim perry, jr.
  * @version	02.10.2016
  */
-public class Time {
+public class Time implements Formatter {
 
 	private int hour;
 	private int minute;
@@ -26,16 +26,16 @@ public class Time {
 	 * 			 		set minute, hour and second variables
 	 */ 	
 	public Time(int hour, int minute, int second) {
-		if (hour < 0 || hour > 24) {
-			throw new IllegalArgumentException("Invalid hour, hour must not be less than 0");
+		if (hour < 0 || hour > 23) {
+			throw new IllegalArgumentException("Invalid hour, hour < 0, hour > 23");
 		}
 		if (minute < 0 || minute > 60) {
 			throw new IllegalArgumentException("Invalid minute, minute < 0,  minute > 60");
 		}		
 		if (second < 0 || second > 60) {
-			throw new IllegalArgumentException("Invalid second, second must not be less than 0"); 					
+			throw new IllegalArgumentException("Invalid second, second < 0, second > 60"); 					
 		}
-		if (hour > -1 && hour < 25) {
+		if (hour > -1 && hour < 24) {
 			this.hour = hour;
 		}
 		if (minute > -1 && minute < 61) {
@@ -58,13 +58,13 @@ public class Time {
 	 * Postcondition: 	hour > -1 && hour < 25, minute > -1 && minute < 61, set minute, hour variables
 	 */ 	
 	public Time(int hour, int minute) {
-		if (hour < 0 || hour > 24) {
+		if (hour < 0 || hour > 23) {
 			throw new IllegalArgumentException("Invalid hour, hour < 0 , hour > 24");
 		}
 		if (minute < 0 || minute > 60) {
 			throw new IllegalArgumentException("Invalid minute, minute < 0,  minute > 60");
 		}		
-		if (hour > -1 && hour < 25) {
+		if (hour > -1 && hour < 24) {
 			this.hour = hour;
 		}
 		if (minute > -1 && minute < 61) {
@@ -141,6 +141,40 @@ public class Time {
 		return this.hour + ":"  + this.minute + ":"  + this.second;
 	}	
 			
+	
+	
+	
+	/** 
+	 * return formated version of time as string
+	 * @return formated time
+	 */
+	@Override
+	public String format() {
+		String hoursZero = "";
+		String minutesZero = "";
+		String secondsZero = "";
+		
+		if (this.hour < 10) {
+			hoursZero  = String.format("%02d", this.hour);
+		} else {
+			hoursZero = String.valueOf(this.hour);
+		}
+		
+		if (this.minute < 10) {
+			minutesZero  = String.format("%02d", this.minute);			
+		} else {
+			minutesZero  = String.valueOf(this.minute);
+		}
+		
+		if (this.second < 10) {
+			secondsZero  = String.format("%02d", this.second);			
+		} else {
+			secondsZero = String.valueOf(this.second);
+		}
+		
+		return  hoursZero + ":"  + minutesZero + ":"  + secondsZero;
+	}		
+	
 	
 	
 	
