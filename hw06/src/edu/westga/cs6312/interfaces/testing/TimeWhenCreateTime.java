@@ -14,7 +14,7 @@ import org.junit.Test;
 public class TimeWhenCreateTime {
 
 	/** 
-	 * test: createst of new time object
+	 * test: proper creation of new time object
 	 */	
 	@Test
 	public void testTimeWhenCreateTimeNew() {	
@@ -23,5 +23,57 @@ public class TimeWhenCreateTime {
 		String results = time.toString();
 		assertEquals(expect, results);
 	}
+	
+	/** 
+	 * test: proper creation of new time object
+	 */	
+	@Test
+	public void testTimeWhenCreateTimeNew246060() {	
+		Time time = new Time(24, 60, 60);
+		String expect = "24:60:60"; 
+		String results = time.toString();
+		assertEquals(expect, results);
+	}
+	
+	
+	/** 
+	 * test: proper creation of new time object
+	 */	
+	@Test
+	public void testTimeWhenCreateTimeNew246060seconds01() {	
+		Time time = new Time(24, 60, 60);
+		time.tick();
+		String expect = "1:1:1"; 
+		String results = time.getHour() + ":"  + time.getMinute() + ":"  + time.getSecond();
+		assertEquals(expect, results);
+	}	
+	
+	
+	
+	/** 
+	 * test: proper creation of new time object
+	 */	
+	@Test
+	public void testTimeWhenCreateTimeNew053010() {	
+		Time time = new Time(5, 30, 10);
+		String expect = "5:30:10"; 
+		String results = time.getHour() + ":"  + time.getMinute() + ":"  + time.getSecond();
+		assertEquals(expect, results);
+	}
+	
+	
+	/** 
+	 * test: proper creation of new time object
+	 */	
+	@Test
+	public void testTimeWhenCreateTimeNew053010second1() {	
+		Time time = new Time(5, 30, 10);
+		time.tick();
+		String expect = "5:30:11"; 
+		String results = time.getHour() + ":"  + time.getMinute() + ":"  + time.getSecond();
+		assertEquals(expect, results);
+	}	
+	
+	
 
 }

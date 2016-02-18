@@ -142,6 +142,39 @@ public class Time {
 	}	
 			
 	
+	
+	
+	
+	/** 
+	 * Gets the minutes value
+	 * @return return minutes  
+	 */ 	
+	public int getMinute() {
+		return this.minute;		
+	}	
 
+	
+	/** 
+	 * gets the seconds value
+	 * @return return hours 
+	 */ 	
+	public int getSecond() {
+		return this.second;		
+	}	
+
+	
+	/** 
+	 * gets the hours value
+	 * @return return hours
+	 */ 	
+	public int getHour() {
+		return this.hour;		
+	}	
+
+	
+
+
+	
+	
 	
 }
