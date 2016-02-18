@@ -29,8 +29,8 @@ public class TimeWhenCreateTime {
 	 */	
 	@Test
 	public void testTimeWhenCreateTimeNew246060() {	
-		Time time = new Time(24, 60);
-		String expect = "24:60:0"; 
+		Time time = new Time(23, 59);
+		String expect = "23:59:0"; 
 		String results = time.toString();
 		assertEquals(expect, results);
 	}
@@ -41,9 +41,9 @@ public class TimeWhenCreateTime {
 	 */	
 	@Test
 	public void testTimeWhenCreateTimeNew246060seconds01() {	
-		Time time = new Time(24, 60, 60);
+		Time time = new Time(23, 59, 59);
 		time.tick();
-		String expect = "1:1:1"; 
+		String expect = "23:59:60"; 
 		String results = time.getHour() + ":"  + time.getMinute() + ":"  + time.getSecond();
 		assertEquals(expect, results);
 	}	

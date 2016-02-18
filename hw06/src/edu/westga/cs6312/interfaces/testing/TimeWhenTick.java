@@ -75,9 +75,9 @@ public class TimeWhenTick {
 	 */	
 	@Test
 	public void testTimeWhenCreateTimeNew2460seconds01() {	
-		Time time = new Time(24, 60);
+		Time time = new Time(23, 59);
 		time.tick();
-		String expect = "24:60:1"; 
+		String expect = "23:59:1"; 
 		String results = time.getHour() + ":"  + time.getMinute() + ":"  + time.getSecond();
 		assertEquals(expect, results);
 	}
@@ -102,9 +102,9 @@ public class TimeWhenTick {
 	 */	
 	@Test
 	public void testTimeWhenCreateTimeNew246060seconds01() {	
-		Time time = new Time(24, 60, 60);
+		Time time = new Time(23, 59, 59);
 		time.tick();
-		String expect = "1:1:1"; 
+		String expect = "23:59:60"; 
 		String results = time.getHour() + ":"  + time.getMinute() + ":"  + time.getSecond();
 		assertEquals(expect, results);
 	}	
