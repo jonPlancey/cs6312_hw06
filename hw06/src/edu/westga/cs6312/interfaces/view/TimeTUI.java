@@ -29,16 +29,8 @@ public class TimeTUI {
 	 * controls program flow 
 	 **/
 	public void run() {
-		//int userchoice = 0;
 		
-
-		
-		
-		
-
-		
-		
-		System.out.println("   -> " + model.toString());
+	
 		
 	}
 	
