@@ -4,13 +4,18 @@
 package edu.westga.cs6312.interfaces.model;
 
 /**
- * @author twenty2ps_employee
- *
+ * Homework HW06  
+ * @author 	cs6312
+ * @author 	jim perry, jr.
+ * @version	02.10.2016
  */
 public interface Formatter {
 
-	
-	public String format();
+	/** 
+	 * return representation of time as string
+	 * @return string
+	 */	
+	String format();
 	
 	
 }

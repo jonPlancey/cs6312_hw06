@@ -31,8 +31,14 @@ public class TimeTUI {
 	public void run() {
 		//int userchoice = 0;
 		
-		Time model = new Time();
-		time.tick();
+
+		
+		
+		
+
+		
+		
+		System.out.println("   -> " + model.toString());
 		
 	}
 	
