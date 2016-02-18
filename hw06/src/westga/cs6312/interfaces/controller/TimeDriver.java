@@ -1,5 +1,6 @@
 package westga.cs6312.interfaces.controller;
 
+import edu.westga.cs6312.interfaces.view.TimeTUI;
 
 /**
  * Homework HW06  
@@ -14,7 +15,7 @@ public class TimeDriver {
 	 * @param args Command line arguments, not used
 	 */ 
 	public static void main(String[] args) {
-		TimeUI gui = new TimeTUI();
+		TimeTUI gui = new TimeTUI();
 		gui.run();		
 
 	}
